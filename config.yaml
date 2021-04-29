@@ -1,0 +1,14 @@
+apiVersion: cloud-build-notifiers/v1
+kind: build-notifier
+metadata:
+  # !!! Specify name of cloudrun service (without curly brackets)
+  name: {Service_Name}
+spec:
+  notification:
+    # Catch seccess or error status only for specific repo + branch name (without curly brackets)
+    # 1. !!! Specify branch name
+    # 2. !!! Specify repo name
+    filter: build.status in [Build.Status.SUCCESS, Build.Status.FAILURE, Build.Status.TIMEOUT] && build.substitutions["BRANCH_NAME"] == "{Brach_Name}" && build.substitutions["REPO_NAME"] == "{Repo_Name}"
+    delivery:
+      # !!! Specify url to push build info via POST request (without curly brackets)
+      url: {Url}
