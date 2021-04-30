@@ -1,3 +1,7 @@
+# Google Cloud Build notifier
+
+Create cloud build notification with one command
+
 ## Requrements:
 - ```gcloud``` - https://cloud.google.com/sdk/docs/install
 - ```gsutil``` - https://cloud.google.com/storage/docs/gsutil_install
