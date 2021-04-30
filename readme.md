@@ -2,6 +2,9 @@
 
 Create cloud build notification with one command
 
+This script will deploy applicaton via Cloud Run and create Subscription to build events for specific project.
+Then build activity will be sent to provided delivery url in config.yaml.
+
 ## Requrements:
 - ```gcloud``` - https://cloud.google.com/sdk/docs/install
 - ```gsutil``` - https://cloud.google.com/storage/docs/gsutil_install
@@ -13,9 +16,6 @@ Create cloud build notification with one command
 1. Specify name of cloud service, branch name, repo name and delivery url in ```config.yaml```
 2. Log in to google cloud via cli
 3. Run ```sh init.sh {Google_Project_Id} {Google_Project_Number}```
-
-It will deploy applicaton via Cloud Run and create Subscription to build events for specific project.
-Then build activity will be sent to provided delivery url in config.yaml.
 
 ## Links:
 Advanced manual: [https://cloud.google.com/build/docs/configuring-notifications/configure-http](https://cloud.google.com/build/docs/configuring-notifications/configure-http)
